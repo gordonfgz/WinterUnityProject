@@ -9,7 +9,6 @@ public class SlowOnContact : AbstractContact
 
     protected override void ContactEffect(Collider2D col)
     {
-        base.coroutine = base.damageController.Slow(amount, col.GetComponent<TestHealth>(), duration);
-        StartCoroutine(base.coroutine);
+        StartCoroutine(base.damageController.Slow(amount, col.GetComponent<TestHealth>(), duration));
     }
 }

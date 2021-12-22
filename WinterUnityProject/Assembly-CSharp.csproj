@@ -47,20 +47,24 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\LockAngle\LockAngles.cs" />
      <Compile Include="Assets\Scripts\Shooter\SingleShot.cs" />
      <Compile Include="Assets\Scripts\TestingScripts\TestHealth.cs" />
      <Compile Include="Assets\Scripts\ContactDamage\DamageOnContact.cs" />
-     <Compile Include="Assets\Scripts\Controllers\DamageController.cs" />
+     <Compile Include="Assets\Scripts\Flip\FlipOptions.cs" />
+     <Compile Include="Assets\Scripts\Damage\DamageController.cs" />
      <Compile Include="Assets\Scripts\Projectile\AbstractProjectile.cs" />
      <Compile Include="Assets\Scripts\ContactDamage\SlowOnContact.cs" />
+     <Compile Include="Assets\Scripts\Flip\FlipController.cs" />
      <Compile Include="Assets\Scripts\StayDamage\DamageOnStay.cs" />
      <Compile Include="Assets\Scripts\TestingScripts\TestPush.cs" />
-     <Compile Include="Assets\Scripts\ContactDamage\AbstractContact.cs" />
      <Compile Include="Assets\Scripts\Shooter\AbstractShooter.cs" />
      <Compile Include="Assets\Scripts\ContactDamage\ReduceDamageOnContact.cs" />
      <Compile Include="Assets\Scripts\StayDamage\AbstractStayContact.cs" />
      <Compile Include="Assets\Scripts\Projectile\BasicProjectile.cs" />
+     <Compile Include="Assets\Scripts\LockAngle\LockAngleController.cs" />
      <Compile Include="Assets\Scripts\ContactDamage\PoisonOnContact.cs" />
+     <Compile Include="Assets\Scripts\ContactDamage\AbstractContact.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.24f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -282,9 +286,6 @@
  </Reference>
  <Reference Include="UnityEditor.UnityConnectModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.24f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
- </Reference>
- <Reference Include="Newtonsoft.Json">
- <HintPath>C:/Users/grego/Desktop/WinterUnityProject/WinterUnityProject/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.24f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -637,95 +638,8 @@
  <Reference Include="System.Xml.Serialization">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.24f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
  </Reference>
- <Reference Include="Unity.2D.Animation.Editor">
- <HintPath>C:/Users/grego/Desktop/WinterUnityProject/WinterUnityProject/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.InternalAPIEngineBridge.001">
- <HintPath>C:/Users/grego/Desktop/WinterUnityProject/WinterUnityProject/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
- </Reference>
- <Reference Include="Unity.VSCode.Editor">
- <HintPath>C:/Users/grego/Desktop/WinterUnityProject/WinterUnityProject/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.PixelPerfect">
- <HintPath>C:/Users/grego/Desktop/WinterUnityProject/WinterUnityProject/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Tilemap.Editor">
- <HintPath>C:/Users/grego/Desktop/WinterUnityProject/WinterUnityProject/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
- </Reference>
- <Reference Include="PsdPlugin">
- <HintPath>C:/Users/grego/Desktop/WinterUnityProject/WinterUnityProject/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/grego/Desktop/WinterUnityProject/WinterUnityProject/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.VisualStudio.Editor">
- <HintPath>C:/Users/grego/Desktop/WinterUnityProject/WinterUnityProject/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Timeline">
- <HintPath>C:/Users/grego/Desktop/WinterUnityProject/WinterUnityProject/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/grego/Desktop/WinterUnityProject/WinterUnityProject/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.IK.Editor">
- <HintPath>C:/Users/grego/Desktop/WinterUnityProject/WinterUnityProject/Library/ScriptAssemblies/Unity.2D.IK.Editor.dll</HintPath>
- </Reference>
  <Reference Include="Unity.2D.Sprite.Editor">
  <HintPath>C:/Users/grego/Desktop/WinterUnityProject/WinterUnityProject/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Psdimporter.Editor">
- <HintPath>C:/Users/grego/Desktop/WinterUnityProject/WinterUnityProject/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Path.Editor">
- <HintPath>C:/Users/grego/Desktop/WinterUnityProject/WinterUnityProject/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.InternalAPIEditorBridge.001">
- <HintPath>C:/Users/grego/Desktop/WinterUnityProject/WinterUnityProject/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/grego/Desktop/WinterUnityProject/WinterUnityProject/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.PlasticSCM.Editor">
- <HintPath>C:/Users/grego/Desktop/WinterUnityProject/WinterUnityProject/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Rider.Editor">
- <HintPath>C:/Users/grego/Desktop/WinterUnityProject/WinterUnityProject/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/grego/Desktop/WinterUnityProject/WinterUnityProject/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Mathematics">
- <HintPath>C:/Users/grego/Desktop/WinterUnityProject/WinterUnityProject/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.IK.Runtime">
- <HintPath>C:/Users/grego/Desktop/WinterUnityProject/WinterUnityProject/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Animation.Triangle.Runtime">
- <HintPath>C:/Users/grego/Desktop/WinterUnityProject/WinterUnityProject/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Animation.Runtime">
- <HintPath>C:/Users/grego/Desktop/WinterUnityProject/WinterUnityProject/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.PixelPerfect.Editor">
- <HintPath>C:/Users/grego/Desktop/WinterUnityProject/WinterUnityProject/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/Users/grego/Desktop/WinterUnityProject/WinterUnityProject/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Mathematics.Editor">
- <HintPath>C:/Users/grego/Desktop/WinterUnityProject/WinterUnityProject/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Common.Runtime">
- <HintPath>C:/Users/grego/Desktop/WinterUnityProject/WinterUnityProject/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.SpriteShape.Editor">
- <HintPath>C:/Users/grego/Desktop/WinterUnityProject/WinterUnityProject/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Common.Editor">
- <HintPath>C:/Users/grego/Desktop/WinterUnityProject/WinterUnityProject/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.SpriteShape.Runtime">
- <HintPath>C:/Users/grego/Desktop/WinterUnityProject/WinterUnityProject/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

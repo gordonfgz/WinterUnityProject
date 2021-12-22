@@ -9,7 +9,6 @@ public class PoisonOnContact : AbstractContact
     public int delay;
     protected override void ContactEffect(Collider2D col)
     {
-        base.coroutine = damageController.Poison(ticks, poisonDamage, delay, col.GetComponent<TestHealth>());
-        StartCoroutine(base.coroutine);
+        StartCoroutine(base.damageController.Poison(ticks, poisonDamage, delay, col.GetComponent<TestHealth>()));
     }
 }

@@ -9,7 +9,6 @@ public class ReduceDamageOnContact : AbstractContact
 
     protected override void ContactEffect(Collider2D col)
     {
-        base.coroutine = damageController.ReduceDamage(reduction, col.GetComponent<TestHealth>(), duration);
-        StartCoroutine(base.coroutine);
+        StartCoroutine(base.damageController.ReduceDamage(reduction, col.GetComponent<TestHealth>(), duration));
     }
 }

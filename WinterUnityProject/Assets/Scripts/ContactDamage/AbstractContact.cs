@@ -11,7 +11,7 @@ public abstract class AbstractContact : MonoBehaviour
     protected IEnumerator coroutine;
     void Start()
     {
-        damageController = GameObject.Find("DamageController").GetComponent<DamageController>();
+        damageController = FindObjectOfType<DamageController>(); ;
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -29,5 +29,4 @@ public abstract class AbstractContact : MonoBehaviour
 
     // Effect on contact with gameObject
     protected abstract void ContactEffect(Collider2D col);
-
 }
