@@ -48,23 +48,27 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\LockAngle\LockAngles.cs" />
-     <Compile Include="Assets\Scripts\Shooter\SingleShot.cs" />
+     <Compile Include="Assets\Scripts\Shoot\SingleShot.cs" />
      <Compile Include="Assets\Scripts\TestingScripts\TestHealth.cs" />
-     <Compile Include="Assets\Scripts\ContactDamage\DamageOnContact.cs" />
+     <Compile Include="Assets\Scripts\Contact_Trigger\DamageOnContact.cs" />
      <Compile Include="Assets\Scripts\Flip\FlipOptions.cs" />
+     <Compile Include="Assets\Scripts\Turret\ShooterTurret.cs" />
      <Compile Include="Assets\Scripts\Damage\DamageController.cs" />
      <Compile Include="Assets\Scripts\Projectile\AbstractProjectile.cs" />
-     <Compile Include="Assets\Scripts\ContactDamage\SlowOnContact.cs" />
+     <Compile Include="Assets\Scripts\Contact_Trigger\SlowOnContact.cs" />
      <Compile Include="Assets\Scripts\Flip\FlipController.cs" />
+     <Compile Include="Assets\Scripts\Shoot\Shoot.cs" />
      <Compile Include="Assets\Scripts\StayDamage\DamageOnStay.cs" />
-     <Compile Include="Assets\Scripts\TestingScripts\TestPush.cs" />
-     <Compile Include="Assets\Scripts\Shooter\AbstractShooter.cs" />
-     <Compile Include="Assets\Scripts\ContactDamage\ReduceDamageOnContact.cs" />
+     <Compile Include="Assets\Scripts\Shoot\AbstractShoot.cs" />
+     <Compile Include="Assets\Scripts\Contact_Trigger\AbstractContact.cs" />
+     <Compile Include="Assets\Scripts\Turret\AbstractTurret.cs" />
+     <Compile Include="Assets\Scripts\Contact_Trigger\ReduceDamageOnContact.cs" />
      <Compile Include="Assets\Scripts\StayDamage\AbstractStayContact.cs" />
      <Compile Include="Assets\Scripts\Projectile\BasicProjectile.cs" />
      <Compile Include="Assets\Scripts\LockAngle\LockAngleController.cs" />
-     <Compile Include="Assets\Scripts\ContactDamage\PoisonOnContact.cs" />
-     <Compile Include="Assets\Scripts\ContactDamage\AbstractContact.cs" />
+     <Compile Include="Assets\Scripts\Contact_Trigger\PoisonOnContact.cs" />
+     <Compile Include="Assets\Scripts\Shoot\BurstShot.cs" />
+     <Compile Include="Assets\Scripts\Shoot\SpreadShot.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.24f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

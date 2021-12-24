@@ -6,9 +6,9 @@ public class LockAngleController : MonoBehaviour
 {
     public float LockAngle(float curAngle, LockAngles lockAngles)
     {
-        if (curAngle > lockAngles.maxAngle)
+        if (curAngle >= lockAngles.maxAngle)
             curAngle = lockAngles.maxAngle;
-        else if (curAngle < lockAngles.minAngle)
+        else if (curAngle <= lockAngles.minAngle)
             curAngle = lockAngles.minAngle;
         return curAngle;
     }

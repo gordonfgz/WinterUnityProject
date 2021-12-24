@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-[Serializable]
+[System.Serializable]
 public class FlipOptions
 {
     public enum FlipAxis

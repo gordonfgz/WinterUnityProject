@@ -529,7 +529,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 560356014}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.89, y: -3.52, z: 0}
+  m_LocalPosition: {x: -4.72, y: -3.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1200,6 +1200,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1820764167}
+  - component: {fileID: 1820764169}
   - component: {fileID: 1820764168}
   m_Layer: 0
   m_Name: ProjectileHazard
@@ -1233,25 +1234,39 @@ MonoBehaviour:
   m_GameObject: {fileID: 1820764166}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd23139cc7a5796419cac7fc8bddd9e0, type: 3}
+  m_Script: {fileID: 11500000, guid: b4780a6fdd0fa134a8c1e70ededc706a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 7682120248794283522, guid: 2dd47e79f5fb0154395d326381471032, type: 3}
-  rate: 5
-  firePoint: {fileID: 551387830}
+  shoot:
+    projectile: {fileID: 7682120248794283522, guid: 2dd47e79f5fb0154395d326381471032, type: 3}
+    firePoint: {fileID: 551387830}
+    delayBetweenShots: 2
+  shooting: 0
+  numberOfBullets: 3
+  angleBetweenBullets: 10
+--- !u!114 &1820764169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820764166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e51a8369c2749f14088c53078945e5ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRate: 5
+  aggroDistance: 15
+  shootBehaviour: {fileID: 1820764168}
   track: 1
-  trackDistance: 15
+  trackingSpeed: 25
+  delayBetweenTracks: 2
   rotationBase: {fileID: 1293340015}
-  flipOptions:
-  - flipAxis: 1
-    flipThreshold: 90
-    flipTo: 180
-    partsToFlip:
-    - {fileID: 303064359}
+  flipOptions: []
   lockA:
-    maxAngle: 40
-    minAngle: -40
-  delay: 2
+    maxAngle: 999
+    minAngle: -999
 --- !u!1 &1855308906
 GameObject:
   m_ObjectHideFlags: 0
