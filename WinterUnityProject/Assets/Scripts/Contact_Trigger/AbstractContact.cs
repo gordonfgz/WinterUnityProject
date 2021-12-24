@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(PolygonCollider2D))]
 public abstract class AbstractContact : MonoBehaviour
 {
     public string[] tags = { "Player" };
