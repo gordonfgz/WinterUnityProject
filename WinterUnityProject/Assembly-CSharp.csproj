@@ -49,6 +49,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
      <Compile Include="Assets\Scripts\Shooter\SingleShot.cs" />
+     <Compile Include="Assets\Scripts\Controllers\CharacterController.cs" />
      <Compile Include="Assets\Scripts\TestingScripts\TestHealth.cs" />
      <Compile Include="Assets\Scripts\ContactDamage\DamageOnContact.cs" />
      <Compile Include="Assets\Scripts\AggroZone\AggroZone.cs" />
@@ -66,6 +67,7 @@
      <Compile Include="Assets\Scripts\StayDamage\AbstractStayContact.cs" />
      <Compile Include="Assets\Scripts\Projectile\BasicProjectile.cs" />
      <Compile Include="Assets\Scripts\ContactDamage\PoisonOnContact.cs" />
+     <Compile Include="Assets\Scripts\CharacterMovement\CharacterMovement.cs" />
      <Compile Include="Assets\Scripts\EnemyMovement\EnemyMovementAbstract.cs" />
      <Compile Include="Assets\Scripts\EnemyMovement\TowardsPlayer.cs" />
  <Reference Include="UnityEngine">
